@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>ADD TITLE</title>
+
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/cytoscape-presentation-1.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../css/print/pdf.css' : '../css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<!-- Add custom slides and references to modules here -->
+				<!-- This is a title slide -->
+				<section id='title'>
+				<h1>Title of Your Presentation</h1>
+				<br /><br />
+				<h4>Cool Conference - <highlight>Svalbard</highlight></h4>
+				<h5> 21 July 2035</h5>
+
+				<aside class="notes" data-markdown>
+				Don't forget to thank those who invited you!
+				</aside>
+				</section>
+				<!-- These are example Ribbons for agendas and outlines -->
+				<section id='ribbons'>
+				<a href="#/"><ribbon>Title Slide</ribbon></a>
+				<a href="#/3"><ribbon>Template Module A</ribbon></a>
+				<a href="#/headers"><ribbon>List of Headers</ribbon></a>
+				<a href="#" class="navigate-next"><ribbon>How Links Work</ribbon></a>
+				<a class="inactive"><ribbon>Inactive Ribbon Style</ribbon></a>
+				</section>
+				<!-- These are example links to slide within your presentation -->
+				<section id='links'>
+				<h3>This is how slide links work</h3> 
+				<ul>
+					<li>Link to <a href="#" class="navigate-next">next slide</a></li>
+					<li>Link to slide <a href="#/headers">by name</a> (e.g., section id="headers")</li>
+					<li>Link to slide <a href="#/3/2">by position</a> (e.g., third slide over, second slide down)</li>
+				</ul>
+				</section>
+
+				<!-- And this is how you pull in existing modules -->
+				<section data-external="modules/template-a/module.html"></section>
+				<section data-external="modules/template-b/module.html"></section>
+
+				<!-- This is where you'd insert a custom conclusion slide -->
+				<section>
+				<h3>Thank you!<h3>
+				</section>
+			</div>
+		</div>
+
+		<script src="../dist/reveal.js"></script>
+        <script src="../plugin/markdown/markdown.js"></script>
+        <script src="../plugin/highlight/highlight.js"></script>
+        <script src="../plugin/notes/notes.js"></script>
+
+		<script>
+
+			Reveal.initialize({
+				history: true,
+				controls: true,
+				progress: true,
+				center: true,
+				slideNumber: false,
+				touch: true,
+				fragments: true,
+				help: true,
+				showNotes: false,
+				previewLinks: false,
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+				width: 1200,
+				height: 860,
+				autoSlide: 0,
+				
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ],
+				
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+				{ 
+    				src: '../plugin/external/external.js', 
+    				condition: function() { 
+        				return !!document.querySelector( '[data-external],[data-external-replace]' ); 
+    				} 
+				}]
+			});
+
+		</script>
+
+		</body>
+	</html>
