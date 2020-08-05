@@ -4,7 +4,7 @@ Visit [Wynton Tutorials](https://github.com/ucsf-wynton/tutorials/wiki) for a cu
 ## How to Make and Present Wynton Tutorials
 This repo contains a collection of training *modules* for Wynton that can be used to compose workshop presentations. The repo also includes a clone of the reveal.js code that enables the presentation mode for these modules and workshops.
 
-## Presentations, Protocols and Modules
+## Presentations and Modules
 Check out the [current list of training materials](https://github.com/ucsf-wynton/tutorials/wiki).
 
 Building upon the powerful framework of reveal.js, we have developed a few custom features and styles tailored for use in Wynton training materials. In addition to the contents below, you can learn more about using reveal.js in general from the [reveal-readme](reveal-readme.md).
@@ -31,7 +31,7 @@ Building upon the powerful framework of reveal.js, we have developed a few custo
 ## Presenting
 Browse the available training materials already prepared:
 * [presentations](https://github.com/ucsf-wynton/tutorials/wiki#presentations-1) -- Specific programs compiled for target audiences; designed for projector presentation to a group; typically composed of custom slides together with general modules (see below).
-* [protocols](https://github.com/ucsf-wynton/tutorials/wiki#protocols-1) -- General tutorials targeting common workflows or protocols; designed for display on individual monitors; typically linked to individually or in a presentation.
+* [modules](https://github.com/ucsf-wynton/tutorials/wiki#protocols-1) -- General tutorials targeting common workflows or protocols; designed for display on individual monitors; typically linked to individually or in a presentation.
 
 #### Navigating
 Use arrow keys, "space" or the on-screen arrows (lower right) to navigate the slides. Take note of modules that are organized ___vertically___ within a presentation.
@@ -98,9 +98,6 @@ Say you are putting together a presentation for class or workshop, but the exist
 Say you want to present a topic in detail, but it is not covered by any of the existing modules here. Well, you can make your own modules that can then be used (and reused) in multiple compositions (see Strategy 1). If possible, try to make the module focused on a single topic. Make more than one module, if necessary. And try to make the slides generic enough so that the module can be reused by other presenters, e.g., avoid content that is particular to only one audience, venue or setting.  
 
    Note how the ```moduled.html``` file is simply a set of ```<section>``` tags; while the ```index.html``` is generic wrapper you can copy/paste to make your sections work as a reveal.js presentation. The Style section below will cover most of the aspects of reveal you'll need to know to build a set of slides. 
-
-3. **Composing a protocol**
-In contrast to presentations, protocols are easier to prepare. Since protocols work best as brief, self-guided lessons, they are organized as a single level of subdirectories; one for each protocol. Simply copy one of the existing protocol template directories and rename it. Then you can replace the template ```sections``` with your slide content.
 
 ## Style
 We have developed [custom themes for Wynton tutorials](https://github.com/ucsf-wynton/tutorials/tree/master/dist/theme). These stylesheets provide settings and features tailored for our content, making it easier to put together (and reuse) training materials in this repo. Review how to use these customizations below.
@@ -172,7 +169,7 @@ Images are automatically scaled, centered and given a drop shadow border. Common
 
 You can also float the image to the left (or right) side by appending ```"float:left"``` to the style.
 
-*Pro tip: If you have local copies of the images you want to include, upload them into the same directory as the html file, but include the path in ```src``` relative to the presentation (or protocol) directory, like in the example above. The index.html wrapper includes a base href="../.." so that the paths will work for both modules and presentations. If these images are likely to be used by multiple modules or presentations, you can also upload them to the top level ```assets/images``` dir, in which case the relative path in ```src``` should be "../assets/images".*
+*Pro tip: If you have local copies of the images you want to include, upload them into the same directory as the html file, but include the path in ```src``` relative to the presentation (or module) directory, like in the example above. The index.html wrapper includes a base href="../.." so that the paths will work for both modules and presentations. If these images are likely to be used by multiple modules or presentations, you can also upload them to the top level ```assets/images``` dir, in which case the relative path in ```src``` should be "../assets/images".*
 
 ### Citations
 Use the ```<small>``` tag to format citations at the bottom of slides.
@@ -232,12 +229,11 @@ The default table style includes a distinct header and background shading on alt
 ***[example slide](https://ucsf-wynton.github.io/tutorials/presentations/modules/template-b/index.html#/table)***
 
 ### Editing Wynton Theme
-We have two customized stylesheets for presentations and protocols (.css). You can edit these CSS files directly, but understand that all presentations and protocols will be affected. If you want to make a custom stylesheets, please start a new CSS file. 
+We have a customized stylesheets for presentations (.css). You can edit the CSS files directly, but understand that all presentations and protocols will be affected. If you want to make a custom stylesheets, please start a new CSS file. 
 
 ```
 |--css/theme/
 |  |--wynton-presentation-1.css
-|  |--wynton-protocol-1.css
 ```
 
 If you are not sure where to make an edit, simply [file a issue](https://github.com/ucsf-wynton/tutorials/issues) for the project and we'll advise or make the edit for you.
