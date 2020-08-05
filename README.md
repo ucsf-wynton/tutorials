@@ -71,21 +71,18 @@ If you are going to edit a tutorial and are not already familiar with Reveal.js,
 In order to preview your local changes, you can simply open the HTML files in your browser, e.g., using the ```open``` command line function. Alternatively, for a live preview that updates in real-time, you can run ```npm start``` from the top directory. For npm functionality, you will need to install node.js (https://nodejs.org) and run ```npm install``` the first time (see [full setup](https://github.com/hakimel/reveal.js/blob/master/README.md#full-setup)).
 
 #### Organization
-The first thing to notice about our repo is the organization. From the top level, you will find ```presentations``` and ```protocols```. These leverage different CSS styles and different sets of ```modules```. 
+The first thing to notice about our repo is the organization. From the top level, you will find ```presentations``` and under there, you'll find ```modules```. 
 ```
 |--presentations/
-|  |--advanced-automation.html
+|  |--intro-wynton-2020.html
 |  |--(other presentations)
 |  |--modules/
-|     |--intro-cytoscape/
+|     |--tour-of-wynton/
 |     |--(other presentation modules)
-|--protocols/
-|  |--loading-networks/
-|  |--(other protocols)
 ```
 Each level can contain image assets that are relevant at that level. For example, images that are needed referenced by the html a directory should be kept in that directory. Images that are actively being used across many tutorials are kept in the top level's ```assets/images```. 
 
-Each level will have named html files or ```index.html``` files, which are the files that one presents and shares. Modules directories will also have ```module.html``` files which contain the slide content that is referenced and pulled into the presentable html files. For example, the ```index.html``` file for the ```intro-cytoscape``` module includes reveal headers, scripts and this line of code to pull in the slide content:
+Each level will have named html files or ```index.html``` files, which are the files that one presents and shares. Modules directories will also have ```module.html``` files which contain the slide content that is referenced and pulled into the presentable html files. For example, the ```index.html``` file for the ```tour-of-wynton``` module includes reveal headers, scripts and this line of code to pull in the slide content:
 
 ```
 <section data-external="modules/tour-of-wynton/module.html"></section>
@@ -106,21 +103,14 @@ Say you want to present a topic in detail, but it is not covered by any of the e
 In contrast to presentations, protocols are easier to prepare. Since protocols work best as brief, self-guided lessons, they are organized as a single level of subdirectories; one for each protocol. Simply copy one of the existing protocol template directories and rename it. Then you can replace the template ```sections``` with your slide content.
 
 ## Style
-We have developed [custom themes for Wynton tutorials](https://github.com/cytoscape/cytoscape-tutorials/tree/gh-pages/css/theme). These stylesheets provide settings and features tailored for our content, making it easier to put together (and reuse) training materials in this repo. Review how to use these customizations below.
+We have developed [custom themes for Wynton tutorials](https://github.com/ucsf-wynton/tutorials/tree/master/dist/theme). These stylesheets provide settings and features tailored for our content, making it easier to put together (and reuse) training materials in this repo. Review how to use these customizations below.
 
-### Version
-To help develop training material that is accurate and current, we developed a custom footer and variable to specify the version of Cytoscape that the content pertains to. You can update the version tag in the title slide of your presentation/protocol files within the footer div:
-```
-<version>3.5.1</version>
-```
-[![Version](assets/images/version.png)](#null)
-
-### Headings
-We have customized heading tags for the Cytoscape tutorial styles:
+## Headings
+We have customized heading tags for the Wynton tutorial styles:
 
 [![Headers](assets/images/headers.png)](#null)
 
-***[example slide](https://cytoscape.github.io/cytoscape-tutorials/presentations/modules/template-a/index.html#/headers)***
+***[example slide](https://ucsf-wynton.github.io/tutorials/presentations/modules/template-a/index.html#/headers)***
 
 ### Slide Links
 There are many ways to link to slides *within* your presentation. Here are a few of the most useful ones...
@@ -130,7 +120,7 @@ There are many ways to link to slides *within* your presentation. Here are a few
 <a href="#/my-fav-slide">Link slide by name (e.g., section id="my-fav-slide")</a>
 <a href="#" class="navigate-next">Link to next slide</a>
 ```
-***[example slide](https://cytoscape.github.io/cytoscape-tutorials/presentations/template.html#/links)***
+***[example slide](https://ucsf-wynton.github.io/tutorials/presentations/template.html#/links)***
 
 ### Ribbons
 These are ideal for making interactive Agenda or Outline slides. They have a similar style as h1 headers, but are designed to work together with slide links (or external links) and have the nifty behavior of automatically stacking and coloring themselves when you list more than one.
@@ -147,12 +137,12 @@ These are ideal for making interactive Agenda or Outline slides. They have a sim
 
 *Pro tip: if you indicate ```class="inactive"``` then you can gray-out a ribbon and disable its link. This is useful for mid-presentation review of the agenda, i.e., to remind the audience know what's been covered already and where you are at in the presentation.*
 
-***[example slide](https://cytoscape.github.io/cytoscape-tutorials/presentations/template.html#/ribbons)***
+***[example slide](https://ucsf-wynton.github.io/tutorials/presentations/template.html#/ribbons)***
 
 ### Highlight
-Use the ```<highlight>``` tag to highlight text with the Cytoscape-orange color.
+Use the ```<highlight>``` tag to highlight text with the orange color.
 
-***[example slide](https://cytoscape.github.io/cytoscape-tutorials/presentations/modules/template-a/index.html#/highlight)***
+***[example slide](https://ucsf-wynton.github.io/tutorials/presentations/modules/template-a/index.html#/highlight)***
 
 ### Code
 Reveal uses [highlightjs](https://highlightjs.org/) to format code snippets. Use tags around code:
@@ -167,7 +157,7 @@ if (files != null) {
 </pre><c/ode data-trim>
 ```
 
-***[example slide](https://cytoscape.github.io/cytoscape-tutorials/presentations/modules/template-a/index.html#/code)***
+***[example slide](https://ucsf-wynton.github.io/tutorials/presentations/modules/template-a/index.html#/code)***
 
 ### Lists
 Typical usage of ```<ul>``` for unordered lists and ```<ol>``` for ordered lists is supported with ```<li>``` tagging each list item.
@@ -187,7 +177,7 @@ You can also float the image to the left (or right) side by appending ```"float:
 ### Citations
 Use the ```<small>``` tag to format citations at the bottom of slides.
 
-***[example slide](https://cytoscape.github.io/cytoscape-tutorials/presentations/modules/template-b/index.html#/list-image-cit)***
+***[example slide](https://ucsf-wynton.github.io/tutorials/presentations/modules/template-b/index.html#/list-image-cit)***
 
 ### Animation
 The ```fragment``` class can be added to any html elements (e.g., paragraphs, images, list items) to set them up for animation, i.e., step-wise display. If you want to animate more than one element at the same time, simply wrap them in a div and add ```class="fragment"``` to it. You can also specify the type of animation per fragment...
@@ -219,10 +209,9 @@ And for more precise control over the order and combination of animated fragment
 <p class="fragment" data-fragment-index="2">Appears second</p>
  ```
 
-***[example slide](https://cytoscape.github.io/cytoscape-tutorials/presentations/modules/template-b/index.html#/frag-list)***
+***[example slide](https://ucsf-wynton.github.io/tutorials/presentations/modules/template-b/index.html#/frag-list)***
 
 ### Columns
-The Cytoscape stylesheet includes a custom ```column``` class which can be applied to two consecutive divs to automatically get a two-column layout for your slide content.
 
 ```
 <div class="column">
@@ -233,60 +222,22 @@ The Cytoscape stylesheet includes a custom ```column``` class which can be appli
 </div>
 ```
 
-***[example slide](https://cytoscape.github.io/cytoscape-tutorials/presentations/modules/template-b/index.html#/two-columns)***
+***[example slide](https://ucsf-wynton.github.io/tutorials/presentations/modules/template-b/index.html#/two-columns)***
 
 ### Tables
 The default table style includes a distinct header and background shading on alternating rows. Using ```table```, ```th```, ```tr``` and ```td``` as you normally would, results in a styled table like this...
 
 <a href="#null"><img src="assets/images/table.png" width="400px" /></a>
 
-***[example slide](https://cytoscape.github.io/cytoscape-tutorials/presentations/modules/template-b/index.html#/table)***
+***[example slide](https://ucsf-wynton.github.io/tutorials/presentations/modules/template-b/index.html#/table)***
 
-### Integration with CyBrowser and CyCommands
-CyBrowser allows for viewing any html page in Cytoscape. Together with [CyCommands](http://apps.cytoscape.org/apps/commandtool), this makes it possible to automate tutorial content with buttons and/or links. For example, if the tutorial describes how to load a network, a button to automatically load the network can be included. 
-
-Since these tutorials can be viewed in any web browser, and not just CyBrowser, but with a combination of javascript and css we can hide automation in all browsers other than CyBrowser. This is accomplished by enclosing the button code in a div, which in turn is controlled by javascript to hide it if the html is opened outside of CyBrowser. 
-
-To include a button, add a div of class "cybrowser". The example below adds a button that imports a specific network (galFiltered.sif), using the "network load url" CyCommand:
-    
-```
-<pre><code data-trim>
-<div class="cybrowser">
-        <input type="button" class="btn btn-primary" onclick="cybrowser.executeCyCommand('network load url url=https://cytoscape.github.io/cytoscape-tutorials/protocols/data/galFiltered.sif');" value="Load network"/>
-    </div>
-</code></pre>
-```
-
-To hide the "cybrowser" div, and thus the button, outside of CyBrowser, the following javascript should be added to the parent index file. For example, if the automation code was added to a module.hml file, the javascript should be added to the **body** of the index.html file that includes that module.
-Similarly, there is also a "not-cybrowser" div class that can be used to customize content for regular browser viewing.
-
-```
-<pre><code data-trim>
-<script>
-	Reveal.addEventListener( 'ready', function() {
-	if(!window.navigator.userAgent.includes('CyBrowser')){
-		var divs = document.getElementsByClassName("cybrowser")
-		for (var i=0;i<divs.length;i++){
-			divs[i].style.display = "none";
-		}
-	} else {
-		var divs = document.getElementsByClassName("not-cybrowser")
-		for (var i=0;i<divs.length;i++){
-			divs[i].style.display = "none";
-		}
-	}
-});
-</script>  
-</code></pre>
-```
-
-### Editing Cytoscape Theme
+### Editing Wynton Theme
 We have two customized stylesheets for presentations and protocols (.css). You can edit these CSS files directly, but understand that all presentations and protocols will be affected. If you want to make a custom stylesheets, please start a new CSS file. 
 
 ```
 |--css/theme/
-|  |--cytoscape-presentation-1.css
-|  |--cytoscape-protocol-1.css
+|  |--wynton-presentation-1.css
+|  |--wynton-protocol-1.css
 ```
 
-If you are not sure where to make an edit, simply [file a issue](https://github.com/cytoscape/cytoscape-tutorials/issues) for the project and we'll advise or make the edit for you.
+If you are not sure where to make an edit, simply [file a issue](https://github.com/ucsf-wynton/tutorials/issues) for the project and we'll advise or make the edit for you.
