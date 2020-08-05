@@ -25,7 +25,7 @@
 		<div class="reveal">
 			<div class="slides">
 			<!-- this is just a shell to import the sections file -->
-			<section data-external="modules/template-a/module.html"></section>
+			<section data-external="/module.html"></section>
 
 			</div>
 		</div>
@@ -52,7 +52,16 @@
 				height: 860,
 				autoSlide: 0,
 
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ],
+
+                                // More info https://github.com/hakimel/reveal.js#dependencies
+                                dependencies: [
+                                {
+                                src: '../../../plugin/external/external.js',
+                                condition: function() {
+                                        return !!document.querySelector( '[data-external],[data-external-replace]' );
+                                }
+                                }]
 			});
 
 		</script>
