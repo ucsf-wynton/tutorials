@@ -25,6 +25,7 @@ Last login: Thu Jul 16 17:03:28 2020
 	
 <section>	
     <h1>sftp</h1>
+	
     <pre><code>
 sftp <username>@log2.wynton.ucsf.edu
 user@log2.wynton.ucsf.edu's password:
@@ -45,9 +46,9 @@ sftp>
 <section>
 	<h1>Global scratch</h1>
     <ul>
-        <li> mounted as <code>/wynton/scratch</code> and is available as a shared directory from all Wynton nodes</li>
-        <li> </li>
-                
+        <li> mounted as <pre><code>/wynton/scratch</code></pre> </li>
+        <li> available as a shared directory from all Wynton nodes</li>
+        <li> <i>automatically purged</i> after 2 weeks</li>       
     </ul>
 </section>    
     
@@ -55,9 +56,11 @@ sftp>
 <section>
 	<h1>Local scratch</h1>
     <ul>
-        <li> mounted as <code>//scratch</code> </li>
-            
+        <li> mounted as <pre><code>/scratch</code></pre> </li>
+        <li> each node has it's <i>own</i> <pre><code>/scratch</code></pre> directory</li>
+        <li> <pre><code>/scratch<code></pre> is not shared with other nodes
     </ul>    
+    <a href="https://wynton.ucsf.edu/hpc/scheduler/using-local-scratch.html>Using local scratch</a>
 </section>
     
 <section>
