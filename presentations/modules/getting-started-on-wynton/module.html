@@ -57,7 +57,7 @@ sftp>
 	<h1>Local scratch</h1>
     <ul>
         <li> mounted as <pre><code>/scratch</code></pre> </li>
-        <li> each node has it's <pre>/scratch</pre>
+        <li> each node has it's own
         <li> is not shared with other nodes </li>
     </ul>    
     <a href="https://wynton.ucsf.edu/hpc/scheduler/using-local-scratch.html>Using local scratch</a>
@@ -65,7 +65,11 @@ sftp>
     
 <section>
 	<h1>Linux operating system</h1>
-
+    <ul>
+        <li> CentOS 7 Linux</li>
+        <li> Job scheduler: SGE 8.1.9 (Son of Grid Engine)<li>
+        <li> Job scheduler will be transitioning to Slurm
+	/ul>  
 </section>
 
 <section>
@@ -80,22 +84,78 @@ sftp>
 </section>
 
 <section>
+	<h1>login nodes</h1>
+    <ul>
+        <li> can be logged into directly</li>
+        <li> minimal compute resource</li>         
+    </ul>
+</section>
+
+<section>
+	<h1>development nodes</h1>
+    <ul>
+        <li> cannot be logged into directly</li>
+        <li> log in to a login node first</li>     
+    </ul>         
+</section>
+             
+<section>
+	<h1>data transfer nodes nodes</h1>
+    <ul>
+        <li> like login nodes, can be logged in to directly</li>
+        <li> have 10 Gbps network connections (login nodes have 1 Gpbs)
+    </ul>         
+</section>
+             
+<section>
+	<h1>compute nodes</h1>
+    <ul>
+        <li> can not be logged into directly </li>             
+        <li> the scheduler will send jobs to compute nodes </li>     
+    </ul>         
+             
+</section>
+
+<section>
+	<h1>gpu nodes</h1>
+    <ul>
+        <li> cannot be logged into directly </li>
+        <li> the schedule will send jobs to gpu nodes </li>
+        <li> for GPU computation</li>         
+    </ul>         
+</section>             
+             
+<section>
+	<h1>Environment modules</h1>
+
+</section>
+             
+<section>
 	<h1>Submitting a job</h1>
 
 </section>
 
 <section>
 	<h1>Interactive sessions</h1>
-
+    <ul>
+        <li> Currently not possible to request interactive jobs via scheduler </li>
+        <li> There are dedicated development nodes that can be used short-term interactive development</li>
+    </ul>        
 </section>
 
 <section>
 	<h1>Troubleshooting</h1>
 
+    Check the job scheduler logs
+    <ul>
+             <li> error log </li>
+             <li> output log </li>
+    </ul>         
 </section>
 
 <section>
 	<h1>Getting additional help</h1>
+             <a href="https://github.com/ucsf-wynton/tutorials/wiki/Getting-Additional-Help">Getting Additional Help - wiki page</a>
 </section>
 	     
 
