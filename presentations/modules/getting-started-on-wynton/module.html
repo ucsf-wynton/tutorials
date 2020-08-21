@@ -140,9 +140,68 @@ sftp>
              
 <section>
 	<h1>Environment modules</h1>
-
+available module repositories (need to be loaded)
+<ul>
+	<li>CBI : Repository of software shared by the Computational Biology and Informatics (http://cbi.ucsf.edu) at the UCSF Helen Diller Family Comprehensive Cancer Center</li>
+	<li>Sali: Repository of software shared by the UCSF Sali Lab</li>
+	</ul>
 </section>
-             
+
+<section>
+	<h1>Loading modules </h1>	
+To load a module, use the `module load` command. For example to load R from the CBI module repository 
+	
+<pre><code>
+  module load CBI r
+</pre></code>
+	
+</section>
+
+<section>
+	<h1>List available modules </h1>	
+
+	After loading a module
+
+	<pre><code>
+$ module avail
+</pre></code>
+</section>
+
+
+<section>
+	<h1>List modules currently loaded</h1>	
+
+	After loading a module
+
+	<pre><code>
+$ module list
+</pre></code>
+</section>
+
+<section>
+	<h1>Disable all loaded modules</h1>	
+
+	<pre><code>
+$ module purge
+</pre></code>
+</section>
+
+<section>
+	<h1>More on environment modules</h1>
+
+	<a href="https://wynton.ucsf.edu/hpc/software/software-modules.html">Wynton - Software Modules</a>
+</section>
+	
+<section>
+	<h1>Other ways of loading software</h1>
+    <ul>
+	<li>Centos Software Collections (SCL)</li>
+	<li>Build the software in your home directory</li>
+        <li>Use a Singularity container (similar to Docker and Docker container images can be converted to Singularity images)</li>
+	</ul>
+</section>
+
+
 <section>
 	<h1>Submitting a job</h1>
          <ul>
@@ -164,8 +223,9 @@ sftp>
   <ol>
 	  <li> ssh to a login node</li>
 	  <li> ssh to a dev node</li>
-	  <li> type python3 to enter the Python REPL for an interactive session</li>
-	  <li> when done, type exit() to quit session</li>
+	  <li> type `python3` to enter the Python REPL for an interactive session</li>
+	  <li> when done, type `exit()` to quit session</li>
+	</ol> 
 </section>
 
 <section>
@@ -173,8 +233,9 @@ sftp>
   <ol>
 	  <li> ssh to a login node</li>
 	  <li> ssh to a dev node</li>
-	  <li> type R to enter the R interactive session</li>
-	  <li> when done, type q() to quit session</li>
+	  <li> type `R` to enter the R interactive session</li>
+	  <li> when done, type `q()` to quit session</li>
+	</ol>
 </section>	
 
 	
@@ -184,7 +245,9 @@ sftp>
 	  <li> ssh to a login node</li>
 	  <li> ssh to a dev node</li>
 	  <li> type `module load Sali matlab`</li>
-	  <li> tyoe `matlab`</li>
+	  <li> type `matlab`</li>
+ </ol>
+	  
 </section>	
 	
 <section>
