@@ -232,11 +232,49 @@ $ module purge
 </section>
 
 <section>
+	<h1>To check on submitted job</h1>
+
+	<ul>
+	<li>Use the qstat command or qstat command along with the job id</li>
+	<pre><code>qstat -j 191442</pre></code>	
+	</ul>
+</section>
+
+<section>
+	<h1>After job ran successfully</h1>
+	
+	<pre><code>grep "usage" my_job_sge.028740</pre></code>
+	<ul>
+        <li>replace the output file name with actual outout file name<li>
+	</ul>
+		</section>
+
+<section>
+	<h1>After a failed job</h1>
+	<pre><code>
+	tail -100000 /opt/sge/wynton/common/accounting | qacct -f -j 191442
+	</pre></code>
+	<ul>
+		<li> replace 191442 with the actual SGE job id</li>
+	</ul>
+</section>
+
+<section>
+	<h1>How much memory to request</h1>
+<ul>
+	<li> With experience, trial & error, you can estimate the memory requirements for various types of jobs</li>
+	<li> Logs, reports and accountings can help provide clues</li>
+	<li> Wynton is relatively forgiving on memory estimates</li>
+	<li> If unsure, try 8GB and then increase/decrease accordingly</li>
+	</ul>
+</section>
+
+
+<section>
 	<h1>More info on submitting jobs</h1>
          <ul>
 		 <li><a href="https://github.com/ucsf-wynton/tutorials/wiki/How-to-Submit-Jobs">Wynton tutorials wiki - How to Submit Jobs</a></li> 
 	</ul>
-
 </section>
 
 
