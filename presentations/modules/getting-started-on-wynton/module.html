@@ -207,9 +207,10 @@ $ module purge
 <section>
 	<h1>Other ways of loading software</h1>
     <ul>
-	<li>Centos Software Collections (SCL)</li>
-	<li>Build the software in your home directory</li>
-        <li>Use a Singularity container (similar to Docker and Docker container images can be converted to Singularity images)</li>
+	    <li> <a href="https://wynton.ucsf.edu/hpc/software/scl.html">Centos Software Collections (SCL)</a></li>
+	    <li> Download a pre-built binary to your own account</li>
+	    <li> Build the software in your home directory</li>
+        <li> <a href="https://wynton.ucsf.edu/hpc/software/singularity.html">Use a Singularity container</a> (similar to Docker and Docker container images can be converted to Singularity images)</li>
 	</ul>
 </section>
 
@@ -218,8 +219,13 @@ $ module purge
 	<h1>Submitting jobs</h1>
 
 <ul>
-	<li> Wynton uses SGE (Son of Grid Engine) for 
-		
+	<li> Wynton uses SGE (Son of Grid Engine) for job scheduling.</li>
+	<li> example SGE job submission: `qsub -l h_rt=00:01:00 -l mem_free=1G my_job.sge` </li>
+	<li> (replace time, memory and file name with your choices)</li>
+<ul>
+	<li>	-l h_rt = maximum runtime (hh:,,:ss or seconds)</li>
+	<li> -l mem_free = maximum memory (K for kilobytes, M for megabytes, G for gigabytes)</li>
+		</ul>		
 	</ul>
 	
 </section>
