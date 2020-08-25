@@ -220,10 +220,11 @@ $ module purge
 
 <ul>
 	<li> Wynton uses SGE (Son of Grid Engine) for job scheduling.</li>
-	<li> example SGE job submission: `qsub -l h_rt=00:01:00 -l mem_free=1G my_job.sge` </li>
+	<li> example SGE job submission: 
+		<pre><code>qsub -l h_rt=00:01:00 -l mem_free=1G my_job.sge</code></pre> </li>
 	<li> (replace time, memory and file name with your choices)</li>
 <ul>
-	<li>	-l h_rt = maximum runtime (hh:,,:ss or seconds)</li>
+	<li>	-l h_rt = maximum runtime (hh:mm:ss or seconds)</li>
 	<li> -l mem_free = maximum memory (K for kilobytes, M for megabytes, G for gigabytes)</li>
 		</ul>		
 	</ul>
