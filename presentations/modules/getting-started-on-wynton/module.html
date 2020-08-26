@@ -322,7 +322,20 @@ $ module purge
  </ol>
 	  
 </section>	
+
+<section>
+	<h1>Best practices</h1>
+
+    <ol>
+	<li> backup your data if it is important</li>
+        <li> login nodes (or dev nodes) to submit batch jobs to the cluster, dev nodes for interactive work</li>
+        <li> use local scratch for staging data and computations</li>
+        <li> if using conda environments in Anaconda Python, this is best done inside a Singularity container</li>
+	<li> X2Go has better performance than X-forwarding</li>	
+   </ol>
 	
+</section>
+
 <section>
 	<h1>Troubleshooting</h1>
       Check the job scheduler log files	
