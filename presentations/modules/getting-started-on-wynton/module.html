@@ -7,7 +7,7 @@
 	<h1>What is Wynton HPC?</h1>
 	<ul>
 		<li>a large, shared storage and computing cluster underlying UCSF’s Research Computing Capability</li>
-		<li>Funded and administered cooperatively by UCSF campus IT, key research groups</li>
+		<li>Funded and administered cooperatively by UCSF campus IT and key research groups</li>
 		<li>Free to use for all UCSF researches</li>
 		<li><a href="https://wynton.ucsf.edu">https://wynton.ucsf.edu</a></li>
 	</ul>
@@ -101,9 +101,8 @@ sftp>
 	<h1>Linux operating system</h1>
 	     
     <ul>
-        <li> CentOS 7 Linux</li>
-        <li> Job scheduler: SGE 8.1.9 (Son of Grid Engine)</li>
-	<li> Job scheduler will be transitioning to Slurm</li>
+        <li>The computing environment's operating system is CentOS 7 Linux</li>
+	<li>Becoming comfortable using the Linux command line and the bash "shell" are very useful skills to interact with the Wynton HPC environment</li>	   
     </ul>  
 </section>
 
@@ -247,7 +246,7 @@ $ module purge
 	<h1>Submitting jobs</h1>
 
 <ul>
-	<li> Wynton uses SGE (Son of Grid Engine) for job scheduling.</li>
+	<li> Wynton uses SGE (Son of Grid Engine) for job scheduling</li>
 	<li> example SGE job submission: 
 		<pre><code>qsub -l h_rt=00:01:00 -l mem_free=1G my_job.sge</code></pre> </li>
 	<li> (replace time, memory and file name with your choices)</li>
@@ -258,6 +257,7 @@ $ module purge
 	</ul>
 	
 </section>
+
 
 <section>
 	<h1>To check on submitted job</h1>
@@ -335,6 +335,7 @@ $ module purge
 	  <li> type `R` to enter the R interactive session</li>
 	  <li> when done, type `q()` to quit session</li>
 	</ol>
+	More info on using R on Wynton at <a href="https://wynton.ucsf.edu/hpc/howto/r.html">https://wynton.ucsf.edu/hpc/howto/r.html</a>
 </section>	
 
 	
@@ -346,7 +347,7 @@ $ module purge
 	  <li> type `module load Sali matlab`</li>
 	  <li> type `matlab`</li>
  </ol>
-	  
+	  More info on using Matlab on Wynton at <a href="https://wynton.ucsf.edu/hpc/howto/matlab.html">https://wynton.ucsf.edu/hpc/howto/matlab.html</a>
 </section>	
 
 <section>
@@ -376,7 +377,7 @@ $ module purge
 	<h1>Getting additional help</h1>
 	
 	<ul>
-		<li> Wynton HPC website </li>
+		<li> Check the <a href="https://wynton.ucsf.edu/hpc">Wynton HPC website</a> </li>
 		<li> Email the Wynton HPC system administrators </li>
 		<li> Slack </li>
 		<li> ServiceNow </li>
