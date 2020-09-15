@@ -1,5 +1,6 @@
 <section>
     <h1>Getting Started on Wynton HPC</h1>
+	
 </section>
 
 
@@ -13,27 +14,43 @@
     </ul>	
 </section>
 
+<section>
+  <h1>Logging in to Wynton</h1>
+  <ul>
+	  <li>The primary method to log in to the Wynton HPC cluster is to use an ssh client application</li>
+	  <li>If you are using OS X or Linux, there should already be a built-in version of ssh accessible via the terminal</li>
+	  <li>On Windows, you might need to install an ssh client application such as Putty or MobaXTerm</li>
+	  <li>The Wynton HPC website should be up to data with information on logging in: <a href="https://wynton.ucsf.edu/hpc/get-started/access-cluster.html">Access Cluster</a></li>
+	</ul>
+</section>
+
 <section>	
-    <h1>ssh</h1>
+    <h1>ssh login example</h1>
 
     <pre><code>
-ssh &lt;username&gt;@log2.wynton.ucsf.edu
-user@log2.wynton.ucsf.edu's password:
+ssh &lt;alice&gt;@log2.wynton.ucsf.edu
+alice@log2.wynton.ucsf.edu's password:
 Last login: Thu Jul 16 17:03:28 2020 
 [wynlog2 ~]$
     </code></pre>
+	<ul>
+		<li>To log in via ssh from the command-line, you would replace "alice" with your Wynton account username</li>
+		<li>You can connect to any of the login or data transfer nodes directly</li>
+	</ul>
 </section>
 	
 <section>	
-    <h1>sftp</h1>
+    <h1>sftp login example (file transfer)</h1>
 	
     <pre><code>
-sftp &lt;username&gt;@log2.wynton.ucsf.edu
-user@log2.wynton.ucsf.edu's password:
+sftp &lt;alice&gt;@log2.wynton.ucsf.edu
+alice@log2.wynton.ucsf.edu's password:
 Connected to log2.wynton.ucsf.edu.
 sftp>
     </code></pre>
 	
+	<li>To connect via sftp from the command-line, you would replace "alice" with your Wynton account username<li>
+	<li>You can connect to any of the login or data transfer nodes directly</li>
 	<li> <a href="https://github.com/ucsf-wynton/tutorials/wiki/How-to-Move-Files">Wynton tutorials wiki - How to move files</a> </li>
 </section>
 	
