@@ -70,7 +70,7 @@ sftp>
 	     
     <ul>
         <li>The computing environment's operating system is CentOS 7 Linux</li>
-	<li>Becoming comfortable using the Linux command line and the bash "shell" are very useful skills to interact with the Wynton HPC environment</li>
+	<li>Using the Linux command line and the bash "shell" are very useful skills to interact with the Wynton HPC environment</li>
         <li>If one is not comfortable using the Linux command line, an introduction is available in the module below</li>   
         <li><a href="https://ucsf-wynton.github.io/tutorials/presentations/modules/unix_shell/index.html">Wynton tutorial - Unix shell (slides)</a></li>
     </ul>  
@@ -101,7 +101,7 @@ sftp>
 	
     <ul>
         <li> mounted as <pre><code>/scratch</code></pre> </li>
-	<li> each node has it's own </li>
+	<li> each node has its own </li>
         <li> is not shared with other nodes </li>
 	<li> <a href="https://wynton.ucsf.edu/hpc/scheduler/using-local-scratch.html">Using local scratch</a> </li>
     </ul>    
@@ -126,8 +126,8 @@ sftp>
 	
     <ul>
         <li> can be logged into directly</li>
-        <li> minimal compute resource</li>         
-        <li> node names: log1, log2, log3</li>
+        <li> minimal compute resources</li>         
+        <li> node names: log1, log2</li>
    </ul>
 </section>
 
@@ -135,7 +135,7 @@ sftp>
 	<h1>development nodes</h1>
 	
     <ul>
-        <li> cannot be logged into directly</li>
+        <li> cannot be logged into directly </li>
         <li> log in to a login node first</li>     
         <li> node names: dev1, dev2, dev3, gpudev1</li>
     </ul>         
@@ -144,7 +144,7 @@ sftp>
 <section>
 	<h1>data transfer nodes</h1>
     <ul>
-        <li> like login nodes, can be logged in to directly</li>
+        <li> like login nodes, can be logged into directly</li>
 	<li> have 10 Gbps network connections (login nodes have 1 Gpbs)</li>
         <li> node names: dt1, dt2</li>
     </ul>         
@@ -154,7 +154,7 @@ sftp>
 	<h1>compute nodes</h1>
 	
     <ul>
-        <li> cannot be logged into directly </li>             
+        <li> cannot be logged into </li>             
         <li> the scheduler will send jobs to compute nodes </li>     
 	<li> for CPU computation </li>    
     </ul>         
@@ -165,7 +165,7 @@ sftp>
 	<h1>gpu nodes</h1>
 	
     <ul>
-        <li> cannot be logged into directly </li>
+        <li> cannot be logged into </li>
         <li> the schedule will send jobs to gpu nodes </li>
         <li> for GPU computation</li>         
     </ul>         
@@ -347,7 +347,7 @@ $ module purge
   <ol>
 	  <li> ssh to a login node</li>
 	  <li> ssh to a dev node</li>
-	  <li> type `module load Sali matlab`</li>
+	  <li> type `module load matlab`</li>
 	  <li> type `matlab`</li>
  </ol>
 	  More info on using Matlab on Wynton at <a href="https://wynton.ucsf.edu/hpc/howto/matlab.html">https://wynton.ucsf.edu/hpc/howto/matlab.html</a>
