@@ -106,27 +106,57 @@ sftp>
 
 <section>
 	<h1>shared storage: /wynton/home
+		<ul>
+			<li>User home directories (1 per user)</li>
+			<li>500GB quota</li>
+			<li>Mirrored for high availability</li>
+		</ul>
 </section>
 
 <section>
 	<h1>shared storage: /wynton/scratch
+
+		<ul>
+			<li>All users able to read and write</li>
+			<li>No quota</li>
+			<li>Files not used for 2 weeks are automatically deleted</li>
+		</ul>		
 </section>	
 	
 <section>
 	<h1>shared storage: /wynton/group
+		<ul>
+			<li>Available for purchase by research groups</li>
+			<li>Price ~$160/TB</li>
+			<li>Purchases grouped together, made roughly semi-annually</li>
+		</ul>
 </section>	
 	
 <section>
 	
 	<h1>Shared storage best practices</h1>
+	
+	<ul>
+		<li>BeeGFS is designed for parallel use and is shared by all users</li>
+		<li>Some general guidelines for optimum use of BeeGFS</li>
+                <ul>
+			<li>Distribute reading and writing over several directories</li>
+			<li>Prefer fewer, large files over many small ones</li>
+			<li>Use local scratch when possible</li>
+		</ul>
+	</ul>
+	<hr>
 </section>
 
 <section>
 	<h1>Scratch space</h1>
 	
     <ul>
-        <li> Global scratch</li>
-        <li> Local scratch</li>
+	    <li>2 types of scratch space</li>
+            <ul>
+	      <li> Global scratch</li>
+              <li> Local scratch</li>
+	    </ul> 
     </ul>
 </section>
     
