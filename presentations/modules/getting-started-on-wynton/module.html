@@ -152,6 +152,31 @@ sftp>
 </section>
 
 <section>
+	<h1>BeeGFS - Implications</h1>
+<ul>
+	<li>Parallel filesystems like BeeGFS offer significant advantages, but also come with some caveats</li>
+	</ul>
+</section>
+
+<section>
+	<h1>BeeGFS - Advantages</h1>
+<ul>
+	<li>Overall throughput can be huge</li>
+	<li>Redundancy can be built in by mirroring services</li>
+	<li>Adding new storage and/or metadata services is easy and does not require downtime</li>
+	</ul>
+</section>
+
+<section>
+	<h1>BeeGFS - Caveats</h1>
+<ul>
+	<li>From the perspective of an individual client node, performance is limited by the network bandwidth of that node</li>
+	<li>Since all metadata requests also go over the network, network latency becomes extremely important</li>
+	<li>Certain patterns of I/O can be very problematic</li>
+	</ul>
+</section>
+
+<section>
 	<h1>BeeGFS - storage</h1>
 	<ul>
 		<li>BeeGFS is shared storage (i.e. storage available from all cluster hosts)</li>
