@@ -345,11 +345,17 @@ sftp>
 	<h1>compute nodes</h1>
 	
     <ul>
-        <li> cannot be logged into </li>             
-        <li> the scheduler will send jobs to compute nodes </li>     
-	<li> for CPU computation </li>    
+        <li>cannot be logged into</li>             
+        <li>the scheduler will send jobs to compute nodes</li>     
+	<li>for CPU computation</li>    
+	<li>compute nodes have different characteristics in terms of
+		<ul>
+			<li><b>network connectivity</b>: we have nodes with 1Gbps, 10Gbps, and 40Gbps</li>
+			<li><b>number of cores</b>: we have nodes with 56 cores and nodes with 8 cores, and pretty much everything in between</li>
+			<li><b>memory</b>: all nodes have at least 1 GiB per core, some have much more </li>
+		</ul>
     </ul>         
-             
+             Note: the more resources that are requested for a job, the fewer nodes there are that will be able to meet the request, and the longer the wait time will be
 </section>
 
 <section>
