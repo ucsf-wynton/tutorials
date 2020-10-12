@@ -178,6 +178,17 @@ sftp>
 </section>
 
 <section>
+	<h1>BeeGFS - I/O patterns</h1>
+		Anything that requires lots of metadata operations will feel slow. Examples include:
+	<ul>
+		<li>Lots of writes to the same directory and lots of file lookups and directory searches</li>
+		<li>Users are strongly encouraged to keep the number of reads and writes to a single directory to a reasonable number
+		<li>It is advised against using <b>conda</b> and similar packages because they tend to do a lot of unnecessary metadata operations</li>
+		<li>If using conda, putting the conda application inside a Singularity container will result in better overall file system performance</li>
+	</ul>
+</section>
+
+<section>
 	<h1>BeeGFS - storage</h1>
 	<ul>
 		<li>BeeGFS is shared storage (i.e. storage available from all cluster hosts)</li>
