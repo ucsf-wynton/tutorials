@@ -117,6 +117,37 @@ sftp>
 </section>
 
 <section>
+	<h1>BeeGFS - storage service</h1>
+	<ul>
+		<li>Stores the actual data</li>
+		<li>Note: the data itself is not stored as a file, but rather in "chunks" that contain parts of the file</li>
+		<li>The entire file might consist of chunks on multiple storage servers</li>
+	</ul>
+</section>
+
+<section>
+	<h1>BeeGFS - metadata service</h1>
+	<ul>
+		<li>Provides information about files and directories:</li>
+		<li>file permissions and ownership</li>
+		<li>and, importantly, where the chunks that make up the file reside on the storage servers</li>
+	</ul>
+</section>
+
+<section>
+	<h1>BeeGFS - management service</h1>
+	<li>Keeps track of all the available services and their status</li>
+	<li>When a client starts up, it must talk to the management service to figure out how to connect to all the metadata and storage servers</li>
+</section>
+
+<section>
+	<h1>BeeGFS - client service</h1>
+	<ul>
+		<li>Runs on the client to mount the filesystem and provide linux access to the metadata and storage</li>
+	</ul>
+</section>
+
+<section>
 	<h1>BeeGFS - storage</h1>
 	<ul>
 		<li>Shared storage (i.e. storage available from all cluster hosts) is
