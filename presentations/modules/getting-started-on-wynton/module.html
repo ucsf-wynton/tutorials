@@ -96,9 +96,28 @@ sftp>
         <a href="https://ucsf-wynton.github.io/tutorials/presentations/modules/unix_shell/index.html">Wynton tutorial - Unix shell (slides)</a>
    
 </section>
+<section>
+	<h1>BeeGFS - file system</h1>
+	<ul>
+		<li>BeeGFS is a <i>parallel</i> file system</li>
+		<li>This means the file system is spread across many different servers</li>
+		<li>This is different from something like NFS, which typically has just a single server</li>
+		<li>Like many parallel file systems, BeeGFS provides different services for different types of file access</li> 
+	</ul>
+</section>
 
 <section>
-	<h1>Cluster storage</h1>
+	<h1>BeeGFS - services</h1>
+	<ul>
+		<li><b>storage service</b></li>
+		<li><b>metadata service</b></li>
+		<li><b>management service</b></li>
+		<li><b>client service</b></li>
+	</ul>
+</section>
+
+<section>
+	<h1>BeeGFS - storage</h1>
 	<ul>
 		<li>Shared storage (i.e. storage available from all cluster hosts) is
        provided by a parallel network filesystem (BeeGFS)</li>
