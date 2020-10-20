@@ -16,9 +16,9 @@
   
   <ul>
     <li>There are many great resources for learning how to use the Linux command-line</li>
-    <li>Software Carpentry has an good introduction for users who have never used the command line before</li>
+    <li>The Software Carpentry shell tutorial is a good introduction to understand the basic operations of the shell</li>
     <li><a href="http://swcarpentry.github.io/shell-novice">Software Carpentry - The Unix Shell</a></li>
-    <li> <a href="https://courses.ucsf.edu/course/view.php?id=5327#section-5">Video recording of Software Carpentry - The Unix Shell</a> (UCSF login required)</li>
+    <li><a href="https://courses.ucsf.edu/course/view.php?id=5327#section-5">Video recording of Software Carpentry - The Unix Shell</a> (UCSF login required)</li>
   </ul>
 
 </section>
@@ -45,6 +45,7 @@
   <h1>Useful Commands</h1>
   <ul>
     <li><kbd>man</kbd></li>
+    <li><kbd>cat</kbd></li>
     <li><kbd>more or less</kbd></li>
     <li><kbd>w</kbd></li>
     <li><kbd>uptime</kbd></li>
@@ -67,6 +68,21 @@
 <section>
   <h1>man command</h1>
   <ul><li>Online documentation for commands, including arguments</li></ul>
+</section>
+
+<section>
+  <h1>Displaying file contents</h1>
+  <ul>
+    <li>The <kbd>cat<kbd> command is used to list the contents of a text file</li>
+  </ul>
+<code>
+wynlog1 sgetest]$ cat hello.sh
+#!/bin/env bash
+
+echo "Hello world, I am running on node $HOSTNAME"
+sleep 10
+date
+      </code>
 </section>
 
 <section>
@@ -106,7 +122,8 @@
 </ul>
 </section>
 
-
+  
+  
 
 <section>
   <h1>Wynton-specific shell examples</h1>
