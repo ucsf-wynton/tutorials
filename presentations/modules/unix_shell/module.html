@@ -67,7 +67,32 @@
 
 <section>
   <h1>man command</h1>
-  <ul><li>Online documentation for commands, including arguments</li></ul>
+  <ul><li>Online documentation for commands ("manual pages"), including arguments</li>
+    <li>typing <kbd>man cat</kbd> will show the man page for the <kbd>cat</kbd> command</li>
+  </ul>
+<pre><code>
+CAT(1)                                               User Commands                                               CAT(1)
+
+NAME
+       cat - concatenate files and print on the standard output
+
+SYNOPSIS
+       cat [OPTION]... [FILE]...
+
+DESCRIPTION
+       Concatenate FILE(s), or standard input, to standard output.
+
+       -A, --show-all
+              equivalent to -vET
+
+       -b, --number-nonblank
+              number nonempty output lines, overrides -n
+
+       -e     equivalent to -vE
+
+       -E, --show-ends
+              display $ at end of each line
+</code></pre>
 </section>
 
 <section>
@@ -77,7 +102,7 @@
   </ul>
 
      <pre><code>
-wynlog1 sgetest]$ cat hello.sh
+[wynlog1 ~]$ cat hello.sh
 #!/bin/env bash
 
 echo "Hello world, I am running on node $HOSTNAME"
