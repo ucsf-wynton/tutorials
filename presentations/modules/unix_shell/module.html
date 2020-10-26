@@ -133,7 +133,7 @@ date
  
 <section>
   <h1>General system status: w</h1>
-  <ul><li>The <kbd>w</kbd> will show who is currently logged in and what they are doing</li></ul>
+  <ul><li>The <kbd>w</kbd> command will show who is currently logged in and what they are doing</li></ul>
   <pre><code>
 [wynlog1 ~]$ w
 13:31:52 up 68 days, 21:30, 59 users,  load average: 0.43, 0.50, 0.55
@@ -175,6 +175,13 @@ gmorton  pts/14   132.31.52.126.in 13:21   10:16   0.20s  0.14s ssh -4 -L 7326:l
     
     <ul>
       <li>ps : Simple list of your own processes</li>
+      <pre><code>
+wynlog1 ~]$ ps
+  PID TTY          TIME CMD
+13627 pts/25   00:00:00 bash
+17187 pts/25   00:00:00 ps
+      </code></pre>
+      
       <li>ps ux : More complete list of your own processes</li>
       <li>ps auxww : Every process on the system</li>
     </ul>
@@ -184,6 +191,59 @@ gmorton  pts/14   132.31.52.126.in 13:21   10:16   0.20s  0.14s ssh -4 -L 7326:l
 </section>
 
 <section>
+    <h1>General system status: <kbd>top</kbd></h1>
+<ul>
+  <li>The <kbd>top</kbd> command will display a dynamically updating summary of the system status</li>
+  <li>It provides summary information as well as information about the top processes in terms of CPU and memory usage</li>
+  <pre><code>
+  top - 16:41:24 up 5 days,  6:36, 44 users,  load average: 0.10, 0.09, 0.07
+Tasks: 413 total,   2 running, 411 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  6.0 us,  0.8 sy,  0.0 ni, 92.6 id,  0.4 wa,  0.0 hi,  0.2 si,  0.0 st
+KiB Mem : 16265676 total,  1898216 free,  4563488 used,  9803972 buff/cache
+KiB Swap:  4194300 total,  4194300 free,        0 used. 11057404 avail Mem
+
+  PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+17686 walla3    20   0  200436  96684  17668 R  49.3  0.6   0:04.12 relax.static.li
+30969 iji       20   0    5944   1852    504 S   1.0  0.0  50:44.45 rm
+ 1058 root      20   0  891656  44984  31840 S   0.7  0.3  11:45.32 f2b/server
+17673 root      20   0  160964   5304   3996 S   0.7  0.0   0:00.02 sshd
+ 1010 root      20   0  584232  21704   6568 S   0.3  0.1   0:20.45 tuned
+11038 root      20   0       0      0      0 S   0.3  0.0   0:00.69 kworker/0:2
+27996 palla     20   0  120524   3148   1864 S   0.3  0.0   0:00.47 bash
+    1 root      20   0  128664   7268   4152 S   0.0  0.0   2:18.65 systemd
+    2 root      20   0       0      0      0 S   0.0  0.0   0:01.62 kthreadd
+    6 root      20   0       0      0      0 S   0.0  0.0   0:34.37 ksoftirqd/0
+    7 root      rt   0       0      0      0 S   0.0  0.0   0:00.83 migration/0
+    8 root      20   0       0      0      0 S   0.0  0.0   0:00.00 rcu_bh
+    9 root      20   0       0      0      0 S   0.0  0.0   3:56.21 rcu_sched
+   10 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 lru-add-drain
+   11 root      rt   0       0      0      0 S   0.0  0.0   0:01.01 watchdog/0
+   12 root      rt   0       0      0      0 S   0.0  0.0   0:00.78 watchdog/1
+   13 root      rt   0       0      0      0 S   0.0  0.0   0:00.59 migration/1
+   14 root      20   0       0      0      0 S   0.0  0.0   0:00.42 ksoftirqd/1
+   16 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 kworker/1:0H
+   17 root      rt   0       0      0      0 S   0.0  0.0   0:00.69 watchdog/2
+   18 root      rt   0       0      0      0 S   0.0  0.0   0:03.56 migration/2
+   19 root      20   0       0      0      0 S   0.0  0.0   0:04.76 ksoftirqd/2
+   21 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 kworker/2:0H
+   22 root      rt   0       0      0      0 S   0.0  0.0   0:00.65 watchdog/3
+   23 root      rt   0       0      0      0 S   0.0  0.0   0:02.19 migration/3
+   24 root      20   0       0      0      0 S   0.0  0.0   0:00.64 ksoftirqd/3
+   26 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 kworker/3:0H
+   27 root      rt   0       0      0      0 S   0.0  0.0   0:00.75 watchdog/4
+   28 root      rt   0       0      0      0 S   0.0  0.0   0:00.57 migration/4
+   29 root      20   0       0      0      0 S   0.0  0.0   0:01.57 ksoftirqd/4
+   31 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 kworker/4:0H
+   32 root      rt   0       0      0      0 S   0.0  0.0   0:00.90 watchdog/5
+   33 root      rt   0       0      0      0 S   0.0  0.0   0:00.68 migration/5
+   34 root      20   0       0      0      0 S   0.0  0.0   0:16.16 ksoftirqd/5
+   36 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 kworker/5:0H
+   37 root      rt   0       0      0      0 S   0.0  0.0   0:00.61 watchdog/6
+  </code></pre>
+  
+</section>
+  
+<section>
   <h1>General system status</h1>
 <ul>
   <li><kbd>df</kbd><br>
@@ -191,10 +251,4 @@ gmorton  pts/14   132.31.52.126.in 13:21   10:16   0.20s  0.14s ssh -4 -L 7326:l
     </li>
   <li><kbd>df -h</kbd> provides a "human readable" form of the values</li>
 </ul>
-</section>
-
-<section>
-  <ul>
-    <li>More examples coming soon</li>
-  </ul>
 </section>
