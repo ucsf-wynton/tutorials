@@ -17,7 +17,7 @@
 	<h1>How Big is Wynton?</h1>
 	<ul>
 		<li>429 Compute Nodes</li>
-		<li>10,428 Cores</li>
+		<li>10,428 CPU cores</li>
 		<li>38 GPU nodes</li>
 		<li>132 GPUs</li>
 		<li>7 petabytes of shared disk</li>
@@ -96,6 +96,155 @@ sftp>
         <a href="https://ucsf-wynton.github.io/tutorials/presentations/modules/unix_shell/index.html">Wynton tutorial - Unix shell (slides)</a>
    
 </section>
+
+<section>
+	<h1>Types of nodes</h1>
+	
+    <ul>
+      <li> Login Nodes </li>
+      <li> Data Transfer Nodes </li>
+      <li> Development Nodes </li>
+      <li> Compute Nodes </li>
+      <li> GPU Nodes </li>
+    </ul>
+</section>
+
+<section>
+	<table>
+		
+<tr>
+	<th>Feature</th>
+	<th>Login Nodes</th>		
+	<th>Data Transfer Nodes</th>
+	<th>Development Nodes</th>
+	<th>Compute Node</th>
+</tr>
+<tr>
+	<th>SSH access from outside of cluster</th>
+	<th>yes</th>
+	<th>yes</th>
+	<th>N/A</th>
+	<th>N/A</th>
+</tr>
+<tr>
+	<th>SSH from inside of cluster</th>
+	<th>yes</th>
+	<th>yes</th>
+	<th>yes</th>
+	<th>N/A</th>
+</tr>
+
+<tr>
+	<th>Outbound access</th>
+	<th>Within UCSF only: SSH and SFTP</th>
+	<th>HTTP/HTTPS, FTP/FTPS, SSH, SFTP, GIT+SSH(*)</th>
+	<th>N/A</th>
+</tr>
+	
+<tr>
+	<th>Network speed</th>
+	<th>1 Gbps</th>
+	<th>10 Gbps</th>
+	<th>1 Gbps</th>
+	<th>1-10 Gbps</th>
+</tr>
+
+<tr>
+	<th>Core software</th>
+	<th>minimal</th>
+	<th>minimal</th>
+	<th>Same as compute nodes + compiles and source-code packages</th>
+	<th>CentOS and EPEL packages</th>
+</tr>
+
+<tr>
+	<th>modules (software stacks</th>
+	<th>N/A</th>
+	<th>N/A</th>
+	<th>yes</th>
+	<th>yes</th>
+</tr>
+
+<tr>
+	<th>Job submission</th>
+	<th>yes</th>
+	<th>N/A</th>
+	<th>yes</th>
+	<th>yes</th>
+</tr>
+
+<tr>
+	<th>Purpose</th>
+	<th>Submit and query jobs. SSH to dev nodes. File management</th>
+	<th>Fast in- & outbound file transfers. File management.</th>
+	<th>Compile and install software. Prototype and test job scripts. Submit and query jobs. Version control (clone, pull, push). File management.</th>
+	<th>Running short and long-running job scripts.</th>
+</tr>
+	</table>
+</section>
+
+<section>
+	<h1>login nodes</h1>
+	
+    <ul>
+        <li> can be logged into directly</li>
+        <li> minimal compute resources</li>         
+	</ul>
+        <hr>	
+	node names: <kb>log1</kb>, <kb>log2</kb>
+ 	
+</section>
+
+<section>
+	<h1>development nodes</h1>
+	
+    <ul>
+        <li> cannot be logged into directly </li>
+        <li> log in to a login node first</li>     
+    </ul>
+	<hr>
+	node names: <kbd>dev1<kbd>, <kbd>dev2</kbd>, <kbd>dev3</kbd>, <kbd>gpudev1</kbd>
+            
+</section>
+             
+<section>
+	<h1>data transfer nodes</h1>
+    <ul>
+        <li> like login nodes, can be logged into directly</li>
+	<li> have 10 Gbps network connections (login nodes have 1 Gpbs)</li>
+    </ul>
+    <hr>	
+	node names: <kbd>dt1</kbd>, <kbd>dt2</kbd>
+        
+</section>
+             
+<section>
+	<h1>compute nodes</h1>
+	
+    <ul>
+        <li>cannot be logged into</li>             
+        <li>the scheduler will send jobs to compute nodes</li>     
+	<li>for CPU computation</li>    
+	<li>compute nodes have different characteristics in terms of
+		<ul>
+			<li><b>network connectivity</b>: we have nodes with 1Gbps, 10Gbps, and 40Gbps</li>
+			<li><b>number of cores</b>: we have nodes with 56 cores and nodes with 8 cores, and pretty much everything in between</li>
+			<li><b>memory</b>: all nodes have at least 1 GiB per core, some have much more </li>
+		</ul>
+    </ul>         
+             Note: the more resources that are requested for a job, the fewer nodes there are that will be able to meet the request, and the longer the wait time will be
+</section>
+
+<section>
+	<h1>gpu nodes</h1>
+	
+    <ul>
+        <li> cannot be logged into </li>
+        <li> the schedule will send jobs to gpu nodes </li>
+        <li> for GPU computation</li>         
+    </ul>         
+</section>     
+
 <section>
 	<h1>BeeGFS - file system</h1>
 	<ul>
@@ -294,79 +443,7 @@ sftp>
     
 </section>
 
-<section>
-	<h1>Types of nodes</h1>
-	
-    <ul>
-      <li> login nodes </li>
-      <li> development nodes </li>
-      <li> data transfer nodes </li>
-      <li> compute nodes </li>
-      <li> gpu nodes </li>
-    </ul>
-</section>
-
-<section>
-	<h1>login nodes</h1>
-	
-    <ul>
-        <li> can be logged into directly</li>
-        <li> minimal compute resources</li>         
-	</ul>
-        <hr>	
-	node names: <kb>log1</kb>, <kb>log2</kb>
- 	
-</section>
-
-<section>
-	<h1>development nodes</h1>
-	
-    <ul>
-        <li> cannot be logged into directly </li>
-        <li> log in to a login node first</li>     
-    </ul>
-	<hr>
-	node names: <kbd>dev1<kbd>, <kbd>dev2</kbd>, <kbd>dev3</kbd>, <kbd>gpudev1</kbd>
-            
-</section>
-             
-<section>
-	<h1>data transfer nodes</h1>
-    <ul>
-        <li> like login nodes, can be logged into directly</li>
-	<li> have 10 Gbps network connections (login nodes have 1 Gpbs)</li>
-    </ul>
-    <hr>	
-	node names: <kbd>dt1</kbd>, <kbd>dt2</kbd>
         
-</section>
-             
-<section>
-	<h1>compute nodes</h1>
-	
-    <ul>
-        <li>cannot be logged into</li>             
-        <li>the scheduler will send jobs to compute nodes</li>     
-	<li>for CPU computation</li>    
-	<li>compute nodes have different characteristics in terms of
-		<ul>
-			<li><b>network connectivity</b>: we have nodes with 1Gbps, 10Gbps, and 40Gbps</li>
-			<li><b>number of cores</b>: we have nodes with 56 cores and nodes with 8 cores, and pretty much everything in between</li>
-			<li><b>memory</b>: all nodes have at least 1 GiB per core, some have much more </li>
-		</ul>
-    </ul>         
-             Note: the more resources that are requested for a job, the fewer nodes there are that will be able to meet the request, and the longer the wait time will be
-</section>
-
-<section>
-	<h1>gpu nodes</h1>
-	
-    <ul>
-        <li> cannot be logged into </li>
-        <li> the schedule will send jobs to gpu nodes </li>
-        <li> for GPU computation</li>         
-    </ul>         
-</section>             
              
 	
 <section>
