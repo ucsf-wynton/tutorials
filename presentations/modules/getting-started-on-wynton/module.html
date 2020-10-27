@@ -424,9 +424,10 @@ sftp>
 		<li>BeeGFS is designed for parallel use and is shared by all users</li>
 		<li>Some general guidelines for optimum use of BeeGFS</li>
                 <ul>
-			<li>Distribute reading and writing over several directories</li>
 			<li>Prefer fewer, large files over many small ones</li>
-			<li>Use local scratch when possible</li>
+			<li>Distribute reading and writing over several directories<br>
+			  including SGE output and error files</li>
+			<li>Use local scratch (<kbd>/scratch</kbd>) when possible</li>
 			<li>Don't include anything in <kbd>/wynton</kbd> in your default <kbd>LD_LIBRARY_PATH</kbd></li> 
 
 		</ul>
